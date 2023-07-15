@@ -1,2 +1,5 @@
 (library
- (name micrograd))
+ (name micrograd)
+ (libraries core bisect_ppx.common)
+ (preprocess (pps ppx_deriving.show))
+ (instrumentation.backend (ppx bisect_ppx)))
